@@ -1,0 +1,171 @@
+{% set titulo= 'Inicio - Asocombia' %} {% include "header.html" %}
+
+<!-- Start Banner Hero -->
+<div
+  id="template-mo-zay-hero-carousel"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <ol class="carousel-indicators">
+    <li
+      data-bs-target="#template-mo-zay-hero-carousel"
+      data-bs-slide-to="0"
+      class="active"
+    ></li>
+    <li
+      data-bs-target="#template-mo-zay-hero-carousel"
+      data-bs-slide-to="1"
+    ></li>
+    <li
+      data-bs-target="#template-mo-zay-hero-carousel"
+      data-bs-slide-to="2"
+    ></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row p-5">
+          <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+            <img
+              class="img-fluid"
+              src="{{url_for('static', filename='img/background-c2.png')}}"
+              alt=""
+            />
+          </div>
+          <div class="col-lg-6 mb-0 d-flex align-items-center">
+            <div class="text-align-left align-self-center">
+              <h1 class="h1 text-success"><b>Asocombia</b></h1>
+              <h3 class="h2">Asociación Campesina Agroecológica de Combia</h3>
+              <p>
+                En Asocombia, nos enfocamos en ofrecer productos 100% naturales
+                desde el campo vallecaucano, promoviendo la agricultura
+                sostenible y cultivando alimentos frescos y saludables con amor
+                y respeto por la naturaleza.
+                <!-- <a rel="sponsored" class="text-success" href="https://templatemo.com" target="_blank">TemplateMo</a> website. 
+                              Image credits go to <a rel="sponsored" class="text-success" href="https://stories.freepik.com/" target="_blank">Freepik Stories</a>,
+                              <a rel="sponsored" class="text-success" href="https://unsplash.com/" target="_blank">Unsplash</a> and
+                              <a rel="sponsored" class="text-success" href="https://icons8.com/" target="_blank">Icons 8</a>. -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row p-5">
+          <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+            <img
+              class="img-fluid"
+              src="{{url_for('static', filename='img/background-c222.jpg')}}"
+              alt=""
+            />
+          </div>
+          <div class="col-lg-6 mb-0 d-flex align-items-center">
+            <div class="text-align-left">
+              <h1 class="h1">Conocimiento para cosecha abundante</h1>
+              <!-- <h3 class="h2">Productos frescos y deliciosos, cultivados con amor y respeto por la naturaleza. ¡Descúbrelos y disfruta!</h3> -->
+              <p>
+                La sabiduría en la siembra se refleja en una abundante cosecha.
+                Descubre la variedad y calidad de productos que ofrecemos en
+                Asocombia: tomates, cilantro, lulo, zanahorias, habichuelas,
+                cebolla junca y truchas. ¡Déjate seducir por su exquisitez!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row p-5">
+          <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+            <img
+              class="img-fluid"
+              src="{{url_for('static', filename='img/background-c33.jpg')}}"
+              alt=""
+            />
+          </div>
+          <div class="col-lg-6 mb-0 d-flex align-items-center">
+            <div class="text-align-left">
+              <h1 class="h1">Nuestra Comunidad</h1>
+              <h3 class="h2">
+                La conexión entre personas, tierra y alimentos de calidad
+              </h3>
+              <p>
+                La comunidad de Combia es un ejemplo de conexión entre las
+                personas, la tierra y los alimentos. Su compromiso con la
+                agricultura sostenible y la calidad de los productos refleja su
+                amor y respeto por la naturaleza, brindando una experiencia
+                única a quienes disfrutan de sus cosechas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a
+    class="carousel-control-prev text-decoration-none w-auto ps-3"
+    href="#template-mo-zay-hero-carousel"
+    role="button"
+    data-bs-slide="prev"
+  >
+    <i class="fas fa-chevron-left"></i>
+  </a>
+  <a
+    class="carousel-control-next text-decoration-none w-auto pe-3"
+    href="#template-mo-zay-hero-carousel"
+    role="button"
+    data-bs-slide="next"
+  >
+    <i class="fas fa-chevron-right"></i>
+  </a>
+</div>
+<!-- End Banner Hero -->
+
+<!-- Start Categories of The Month -->
+<section class="container py-5">
+  <div class="row text-center pt-3">
+    <div class="col-lg-6 m-auto">
+      <h3 class="h3">Algunos de nuestros productos</h3>
+      <p>
+        Nuestra amplia variedad de productos frescos y deliciosos, cultivados
+        con amor y respeto por la naturaleza, te espera para deleitar tu
+        paladar.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-4 p-5 mt-3">
+      <a href="#"
+        ><img
+          src="{{url_for('static', filename='img/verdura-1.jpg')}}"
+          class="rounded-circle img-fluid border"
+      /></a>
+      <h5 class="text-center mt-3 mb-3">Tomates</h5>
+      <!-- <p class="text-center"><a class="btn btn-success">Go Shop</a></p> -->
+    </div>
+    <div class="col-12 col-md-4 p-5 mt-3">
+      <a href="#"
+        ><img
+          src="{{url_for('static', filename='img/verdura-2.jpg')}}"
+          class="rounded-circle img-fluid border"
+      /></a>
+      <h2 class="h5 text-center mt-3 mb-3">Zanahorias</h2>
+      <!-- <p class="text-center"><a class="btn btn-success">Go Shop</a></p> -->
+    </div>
+    <div class="col-12 col-md-4 p-5 mt-3">
+      <a href="#"
+        ><img
+          src="{{url_for('static', filename='img/verdura-3.jpg')}}"
+          class="rounded-circle img-fluid border"
+      /></a>
+      <h2 class="h5 text-center mt-3 mb-3">Cebolla Larga</h2>
+      <!-- <p class="text-center"><a class="btn btn-success">Go Shop</a></p> -->
+    </div>
+  </div>
+</section>
+<!-- End Categories of The Month -->
+
+{% include "footer.html" %}

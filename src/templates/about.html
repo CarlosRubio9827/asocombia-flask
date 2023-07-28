@@ -1,0 +1,111 @@
+{% set titulo= 'Sobre Nosotros - Asocombia' %} {% include "header.html" %}
+<section id="about-container" class="py-5">
+  <div class="container">
+    <div class="row align-items-center py-5">
+      <div class="col-md-8 text-white">
+        <h1>Sobre Nosotros</h1>
+        <p>
+          Asocombia: Agricultura sostenible y productos frescos de calidad desde
+          Combia, Palmira - Valle del Cauca.
+          <br />
+          <br />
+          En Asocombia, somos una asociación sin ánimo de lucro dedicada a
+          promover una agricultura sostenible y ofrecer productos frescos y de
+          alta calidad. Desde nuestro corregimiento en Combia, en el hermoso
+          municipio de Palmira, Valle del Cauca, nos hemos convertido en un
+          referente en la producción y distribución de alimentos agroecológicos.
+          <br />
+          <br />
+          Nuestros agricultores cultivan con pasión y cuidado, utilizando
+          técnicas agroecológicas y conocimientos tradicionales para garantizar
+          productos de máxima pureza y sabor. Desde el frijol cargamanto hasta
+          el cilantro, y desde la cebolla cabezona hasta el tomate de árbol y la
+          trucha, seleccionamos cada producto con atención para llevar
+          auténticos sabores de nuestra región a tu mesa.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <img
+          id="img-about"
+          width="100%"
+          src="{{url_for('static', filename='img/about-1.jpg')}}"
+          alt="About Hero"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Close Banner -->
+
+<!-- Start Section -->
+<section class="container py-5">
+  <div class="row text-center pt-5 pb-3">
+    <div class="col-lg-6 m-auto">
+      <h1 class="h1">Nuestro agricultores</h1>
+      <p>
+        Nuestros apasionados agricultores cultivan con dedicación, brindando
+        productos de máxima calidad y sabor excepcional.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-lg-3 mb-3">
+      <div class="services-icon-wap shadow">
+        <img class="img-fluid" src="{{url_for('static', filename='img/Agr1.jpg')}}" alt="Brand Logo" />
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="services-icon-wap shadow">
+        <img class="img-fluid" src="{{url_for('static', filename='img/Agr2.jpg')}}" alt="Brand Logo" />
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="services-icon-wap shadow">
+        <img class="img-fluid" src="{{url_for('static', filename='img/Agr3.jpg')}}" alt="Brand Logo" />
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="services-icon-wap shadow">
+        <img class="img-fluid" src="{{url_for('static', filename='img/Agr4.jpg')}}" alt="Brand Logo" />
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Section -->
+<section class="container py-5">
+  <div class="row text-center pb-3">
+    <div class="col-lg-6 m-auto">
+      <h1 class="h1">Nuestro Equipo</h1>
+      <p>
+        Nuestro equipo de trabajo está conformado por personas altamente
+        dedicadas y comprometidas de la región.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 col-lg-12 mb-12">
+      <ul class="list-unstyled text-light footer-link-list">
+        <li>
+          <h4 id="h4">
+            <span>Presidente</span> Luis Fernando pinchao tarapuez
+          </h4>
+        </li>
+
+        <li>
+          <h4 id="h4"><span>Vicepresidente</span> Tobías Sánchez</h4>
+        </li>
+        <li>
+          <h4 id="h4"><span>Secretaria</span> Rosaura pinchao</h4>
+        </li>
+        <li>
+          <h4 id="h4"><span>Tesorero</span> Frank gallego</h4>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- End Section -->
+{% include "footer.html" %}
