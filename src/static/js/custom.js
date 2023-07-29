@@ -1,8 +1,8 @@
 const validateLength = () => {
   const messageElement = document.getElementById("mensaje");
-  let message = messageElement.value.trim();
+  let message = messageElement.value; //.trim();
   const count = message.length;
-  countCaracteres(count)
+  countCaracteres(count);
   if (count > 250) {
     alert("El mensaje no puede superar los 250 caracteres.");
     message = message.slice(0, 250); // Elimina el último carácter para que el mensaje tenga 200 caracteres
@@ -10,8 +10,7 @@ const validateLength = () => {
   }
 };
 
-
-const countCaracteres = ( count)=>{
-  const contadorCar = document.getElementById('contadorCar')
-  contadorCar.innerText = `${count}`
-}
+const countCaracteres = (count) => {
+  const contadorCar = document.getElementById("contadorCar");
+  contadorCar.innerText = `${count}`;
+};

@@ -37,7 +37,7 @@ def aboutUs():
 
 @app.route('/contacto')
 def contact():
-    return render_template('contact.html')
+    return render_template('contact.html', isMessage=False)
 
 @app.route('/contacto', methods=['POST'])
 def getInfoForm():
@@ -51,5 +51,4 @@ def getInfoForm():
     se = serviceSendEmail
     se.sendEmail(app, nombre, email, mensaje)
     
-
-    return render_template('contact.html')
+    return render_template('contact.html', isMessage=True, message="¡Gracias por tu mensaje!")
