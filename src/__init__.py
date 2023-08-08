@@ -4,31 +4,13 @@ from flask_mysqldb import MySQL
 
 app = Flask(__name__)
 
-
 def init_app(config):
     print('Config -- ',config)
     app.config.from_object(config)
-    print('App -- ',app)
-
-    # app.config["MYSQL_HOST"] = "localhost"
-    # app.config["MYSQL_PORT"] = 3306
-    # app.config["MYSQL_USER"] = "root"
-    # app.config["MYSQL_PASSWORD"] = ""
-    # app.config["MYSQL_DB"] = "asocombia"
-    # mysql = MySQL(app)
-    # print('mysql -- ',type(mysql))
-    # cur = mysql.connection.cursor()
-    # cur.execute("""SELECT * from messages""")
-    # rv = cur.fetchall()
-    # print[(rv)]
-    #return str(rv)
-
     return app
 
 @app.route('/')
 def index():
-    # se = serviceSendEmail
-    # se.sendEmail(app)
     return render_template('index.html')
 
 @app.route('/sobrenosotros')
@@ -41,17 +23,16 @@ def contact():
 
 @app.route('/contacto', methods=['POST'])
 def getInfoForm():
-    
-    nombre = request.form["nombre"]
-    email = request.form["email"]
-    mensaje = request.form["mensaje"]
-    print("nombre: ", nombre)
-    print("email: ", email)
-    print("mensaje: ", mensaje)
-    se = serviceSendEmail
-    se.sendEmail(app, nombre, email, mensaje)
-    
-    return render_template('contact.html', isMessage=True, message="¡Gracias por tu mensaje!")
+    try:
+        nombre = request.form["nombre"]
+        email = request.form["email"]
+        mensaje = request.form["mensaje"]
+        se = serviceSendEmail
+        se.sendEmail(app, nombre, email, mensaje)
+        return render_template('contact.html', isMessage=True, message=f"¡Gracias por tu mensaje, {nombre}!")
+    except Exception as e:
+        return render_template('contact.html', isMessage=True, message=f"Hubo un error en el proceso. Por favor {nombre}, intenta nuevamente más tarde.")
+
 
 @app.errorhandler(500)
 def base_error_handler(e):
@@ -59,3 +40,4 @@ def base_error_handler(e):
 @app.errorhandler(404)
 def error_404_handler(e):
     return render_template('404.html'), 404
+

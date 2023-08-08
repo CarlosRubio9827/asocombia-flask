@@ -12,6 +12,11 @@
   <!-- Inicio del form -->
 
   <div class="form">
+    {% if isMessage == False %}
+    <p></p>
+    {% else %}
+    <p>{{message}}</p>
+    {% endif %}
     <form action="/contacto" method="post">
       <div class="form-group">
         <label for="nombre"><b>Nombre completo</b></label>
@@ -56,11 +61,6 @@
         <button class="form-group-submit" type="submit">Enviar</button>
       </div>
     </form>
-    {% if isMessage == False %}
-    <p></p>
-    {% else %}
-    <p>{{message}}</p>
-    {% endif %}
   </div>
 
   <!-- Fin del form -->
