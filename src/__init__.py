@@ -1,11 +1,9 @@
 from flask import Flask, render_template, request
 from src.services import serviceSendEmail
-from flask_mysqldb import MySQL
 
 app = Flask(__name__)
 
 def init_app(config):
-    print('Config -- ',config)
     app.config.from_object(config)
     return app
 
